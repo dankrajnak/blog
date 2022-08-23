@@ -49,10 +49,12 @@ importers:
     specifiers:
       '@sanity/base': ^2.30.5
       '@sanity/core': ^2.30.5
+      '@sanity/data-aspects': ^2.29.3
       '@sanity/default-layout': ^2.30.5
       '@sanity/default-login': ^2.30.5
       '@sanity/desk-tool': ^2.30.5
       '@sanity/eslint-config-studio': ^2.0.0
+      '@sanity/form-builder': ^2.30.5
       '@sanity/vision': ^2.30.5
       eslint: ^8.6.0
       prop-types: ^15.7
@@ -62,10 +64,12 @@ importers:
     dependencies:
       '@sanity/base': 2.30.5_e2j7mneen3arr2g7olztmnnfl4
       '@sanity/core': 2.30.5_sfoxds7t5ydpegc3knd667wn6m
+      '@sanity/data-aspects': 2.29.3
       '@sanity/default-layout': 2.30.5_e2j7mneen3arr2g7olztmnnfl4
       '@sanity/default-login': 2.30.5_zxhai4qal7ezfht52cx4u672cu
       '@sanity/desk-tool': 2.30.5_v7gssc7pv5uabum7m5z5rqx5ii
       '@sanity/eslint-config-studio': 2.0.0_eslint@8.22.0
+      '@sanity/form-builder': 2.30.5_e2j7mneen3arr2g7olztmnnfl4
       '@sanity/vision': 2.30.5_v7gssc7pv5uabum7m5z5rqx5ii
       eslint: 8.22.0
       prop-types: 15.8.1
