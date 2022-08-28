@@ -1,8 +1,32 @@
+import { json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
+import { getPostTitles } from "~/models/post.server";
+
+type LoaderData = {
+  titles: Awaited<ReturnType<typeof getPostTitles>>;
+};
+
+export const loader = async () =>
+  json<LoaderData>({
+    titles: await getPostTitles(),
+  });
+
 export default function Index() {
+  const { titles } = useLoaderData<LoaderData>();
+  console.log(titles);
+
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1 className="">Welcome to Remix</h1>
-      <ul>
+      <h2>{titles?.allPost.map((post) => post.title)}</h2>
+      {titles?.allPost.map((post, i) => (
+        <img
+          src={post.mainImage?.asset?.metadata?.lqip}
+          key={i}
+          width={1000}
+        ></img>
+      ))}
+      {/* <ul>
         <li>
           <a
             target="_blank"
@@ -26,7 +50,7 @@ export default function Index() {
             Remix Docs
           </a>
         </li>
-      </ul>
+      </ul> */}
     </div>
   );
 }

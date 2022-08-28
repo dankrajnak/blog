@@ -1,0 +1,14 @@
+query getAllPosts {
+  allPost {
+    title
+    mainImage {
+      asset {
+        url
+        metadata {
+          blurHash
+          lqip
+        }
+      }
+    }
+  }
+}
